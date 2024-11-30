@@ -114,7 +114,9 @@ def prepare(file: str):
             else:
                 path_option += option + ' '
 
-
+    #print(version)
+    version=version.replace('coqllm','palm')
+    #add by hsz
     return data['code'], path_option, version, data['theorems']
 
 

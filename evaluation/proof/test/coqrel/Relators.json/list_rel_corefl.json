@@ -1,0 +1,1 @@
+[{"history": {"proof": "induction 1; firstorder eauto. sfirstorder depth: 3.", "repairs": ["", "hammer"], "exceptions": []}, "chat": [], "original": "induction 1; firstorder eauto.", "hammer_times": 1, "succ": true}]

@@ -1,0 +1,1 @@
+[{"history": {"proof": "induction l; simpl; auto. intros. destruct a. f_equal; auto.", "repairs": ["", "", "", ""], "exceptions": []}, "chat": [], "original": "induction l; simpl; auto. intros. destruct a. repeat rewrite map_cons. repeat rewrite map_tot_map_packet_fun. f_equal; auto.", "hammer_times": 0, "succ": true}]

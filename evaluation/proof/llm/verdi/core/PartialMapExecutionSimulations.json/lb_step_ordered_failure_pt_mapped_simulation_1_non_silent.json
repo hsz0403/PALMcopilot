@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": [], "tactic": "unfold lb_step_ordered_failure.", "exn": "Cannot coerce lb_step_ordered_failure to an evaluable reference.", "type": "not_evaluable", "handled": true}]}, "chat": [], "original": "unfold lb_step_ordered_failure. intuition.", "hammer_times": 1, "succ": false}]

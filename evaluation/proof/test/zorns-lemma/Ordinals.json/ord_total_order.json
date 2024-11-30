@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": ["intros."], "tactic": "destruct (ord_comp alpha beta) as [|P|]; auto.", "exn": "The reference ord_comp was not found in the current environment.", "type": "ref_not_found", "handled": true}]}, "chat": [], "original": "intros. destruct (ord_comp alpha beta) as [|P|]; auto.", "hammer_times": 3, "succ": false}]

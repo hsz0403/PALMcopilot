@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "unfold extensional. intros. induction H. apply lb_step_execution_step. constructor 2; auto. constructor 3; auto. apply lb_step_execution_step_bis. constructor 2; auto. constructor 1; auto.", "hammer_times": 3, "succ": false}]

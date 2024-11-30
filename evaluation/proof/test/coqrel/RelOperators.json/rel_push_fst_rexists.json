@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": [], "tactic": "apply predicates_sl.Plt_strict.", "exn": "The reference predicates_sl.Plt_strict was not found in the current environment.", "type": "ref_not_found", "handled": true}]}, "chat": [], "original": "intros. apply predicates_sl.Plt_strict.", "hammer_times": 5, "succ": false}]

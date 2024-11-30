@@ -1,0 +1,1 @@
+[{"history": {"proof": "unfold eqrel. sfirstorder depth: 3.", "repairs": ["", "hammer"], "exceptions": []}, "chat": [], "original": "unfold eqrel. intuition eauto.", "hammer_times": 1, "succ": true}]

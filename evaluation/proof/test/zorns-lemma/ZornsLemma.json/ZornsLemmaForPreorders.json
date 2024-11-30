@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "destruct (Z_pigeonhole 0 (S (2^n)) (S n)) as (x,(l,(H1,H2))). exists x. apply premaximal_intro. compute; auto with *. intros x1 (? & ? & ?); omega.", "hammer_times": 1, "succ": false}]

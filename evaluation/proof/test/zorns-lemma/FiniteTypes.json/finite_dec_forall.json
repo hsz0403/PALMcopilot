@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": ["intros."], "tactic": "apply finite_informative_rec; auto.", "exn": "The reference finite_informative_rec was not found in the current environment.", "type": "ref_not_found", "handled": true}]}, "chat": [], "original": "intros. apply finite_informative_rec; auto.", "hammer_times": 4, "succ": false}]

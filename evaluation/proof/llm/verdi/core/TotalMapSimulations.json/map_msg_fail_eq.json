@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "intros. do_in_map. rewrite filter_rel_in. intuition eauto using tot_map_name_inv. do_in_map. rewrite remove_all_elim_2; auto.", "hammer_times": 2, "succ": false}]

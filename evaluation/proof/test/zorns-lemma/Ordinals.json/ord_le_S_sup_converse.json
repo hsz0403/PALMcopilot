@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "intros. assert (forall j, ~ (alpha < beta j)). intros. intro. apply ord_sup_minimal with J. unfold ordS. apply ord_sup_preserve. auto. apply ord_not_le_lt in H0. destruct H0. auto. exists i. auto.", "hammer_times": 5, "succ": false}]

@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "induction l; simpl; intros. contradiction. destruct a. apply not_belong_push_inv. intro. case H1. intro. subst. rewrite tot_map_name_inverse. auto. intro. apply IHl. intros. apply H. auto. auto. intro. apply IHl. intros. apply H. auto. auto.", "hammer_times": 2, "succ": false}]

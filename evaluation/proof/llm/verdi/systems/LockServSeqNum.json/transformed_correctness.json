@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": ["intros."], "tactic": "apply step_dup_star_mutex; auto.", "exn": "The reference step_dup_star_mutex was not found in the current environment.", "type": "ref_not_found", "handled": true}]}, "chat": [], "original": "intros. apply step_dup_star_mutex; auto.", "hammer_times": 3, "succ": false}]

@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "intros. find_apply_lem_hyp reachable_rtc_step. find_apply_lem_hyp rtcn_ind. unfold RTC_R in *. simpl in *. rewrite H0. clear H H0 net tr. induction H1; simpl. - auto. - repeat find_rewrite. rewrite IHclos_refl_trans2. repeat find_rewrite. omega.", "hammer_times": 2, "succ": false}]

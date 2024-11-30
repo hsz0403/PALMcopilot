@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": [], "tactic": "induction 1 as [l l'|l l' l'' H1 IH1 H2]; eauto 10 with datatypes.", "exn": "l'' is already used.", "type": "used_var", "handled": true}]}, "chat": [], "original": "induction 1 as [l l'|l l' l'' H1 IH1 H2]; eauto 10 with datatypes.", "hammer_times": 2, "succ": false}]

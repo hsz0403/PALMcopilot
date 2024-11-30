@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": [], "tactic": "unfold trace_correct, trace_correct'; intros trace; intuition.", "exn": "Cannot coerce trace_correct to an evaluable reference.", "type": "not_evaluable", "handled": true}]}, "chat": [], "original": "unfold trace_correct, trace_correct'; intros trace; intuition.", "hammer_times": 1, "succ": false}]

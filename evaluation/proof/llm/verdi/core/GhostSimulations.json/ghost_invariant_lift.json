@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": ["intros."], "tactic": "eapply step_failure_deghost; eauto.", "exn": "The reference step_failure_deghost was not found in the current environment.", "type": "ref_not_found", "handled": true}]}, "chat": [], "original": "intros. eapply step_failure_deghost; eauto.", "hammer_times": 3, "succ": false}]

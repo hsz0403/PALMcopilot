@@ -63,6 +63,8 @@ def prove_hammer_only(state: State):
     
 def prove_file(file: str, exp_name='test', theorem='', resume='', backtrack=False, skip=False, intersect=False):
     print(file)
+    print(data_path)
+    exit()
     proj = Path(file).parts[0]
     intersection = json.load(open((os.path.join(data_path, 'intersection.json'))))[proj]
     code, path_option, version, theorems = prepare(file)
@@ -120,6 +122,7 @@ def prove_file(file: str, exp_name='test', theorem='', resume='', backtrack=Fals
 
 def run(proj, threads=1, exp_name='', theorem='', resume='', backtrack=False, skip=False, intersect=False):
     files = [f for f in files_in_rec(os.path.join(data_path, proj)) if f.endswith('.json')]
+    print(files)
     if threads > 1:
         args = [(os.path.join(proj, f), exp_name, theorem, resume, backtrack, skip, intersect) for f in files]
         pool = multiprocessing.Pool(processes=threads)

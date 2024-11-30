@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "intros. destruct H as (g, (Hg1, Hg2)). exists g. split; auto. intros g' (Hg'1, Hg'2). unfold id. apply functional_extensionality. intro x. rewrite <- Hg1. rewrite Hg'1. rewrite Hg2. auto.", "hammer_times": 2, "succ": false}]

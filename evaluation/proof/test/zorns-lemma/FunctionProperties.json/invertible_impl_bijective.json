@@ -1,0 +1,1 @@
+[{"history": {"proof": "sfirstorder depth: 3.", "repairs": ["hammer"], "exceptions": [{"ctx": [], "tactic": "unfold invertible, bijective; intuition eauto.", "exn": "Cannot coerce invertible to an evaluable reference.", "type": "not_evaluable", "handled": true}]}, "chat": [], "original": "unfold invertible, bijective; intuition eauto.", "hammer_times": 2, "succ": true}]

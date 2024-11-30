@@ -1,0 +1,1 @@
+[{"history": {"proof": "sfirstorder depth: 3.", "repairs": ["hammer"], "exceptions": []}, "chat": [], "original": "cofix cf. intros H x y xy; destruct xy as [x1 x2 x_rel y_def]; constructor.", "hammer_times": 1, "succ": true}]

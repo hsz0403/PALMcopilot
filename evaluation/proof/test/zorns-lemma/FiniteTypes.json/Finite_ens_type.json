@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": ["intros."], "tactic": ["destruct H as [l].", ""], "exn": "Expects a disjunctive pattern with 2 branches.", "type": "num_branch", "handled": false}]}, "chat": [], "original": "intros. destruct H as [l]. exists l. intro. destruct x. rewrite H0. constructor. congruence.", "hammer_times": 2, "succ": false}]

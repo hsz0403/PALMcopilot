@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": [], "tactic": "exists nil.", "exn": "Not an inductive goal with 1 constructor.", "type": "not_inductive_goal", "handled": true}]}, "chat": [], "original": "exists nil. auto.", "hammer_times": 2, "succ": false}]

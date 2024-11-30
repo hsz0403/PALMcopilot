@@ -1,0 +1,1 @@
+[{"history": {"proof": "unfold Irreflexive, Reflexive, complement, adjacent_to; intuition; inversion H. sfirstorder depth: 3.", "repairs": ["", "hammer"], "exceptions": []}, "chat": [], "original": "unfold Irreflexive, Reflexive, complement, adjacent_to; intuition; inversion H.", "hammer_times": 1, "succ": true}]

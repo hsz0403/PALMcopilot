@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "intro. case (classic (X_odd x)). intro. exists (the_inverse x). apply (X_odd_inverse_is_inverse x). auto. intro. exists default. apply (X_even_is_default x). apply NNPP. auto. Defined.", "hammer_times": 2, "succ": false}]

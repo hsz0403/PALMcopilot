@@ -151,10 +151,21 @@ class State:
         goals = self.fg_goals+self.bg_goals+self.shelved_goals
         return self.retrieval.retrieve_predict(self.serapi, goals)
 
-
-    def query_llm(self, goals):
+    def query_llm_data(self, goals):
+        #print(1)
         premises, defs, lemmas = self.get_premises()
         self.lemmas = lemmas
+        #print(premises, defs, lemmas)
+        #exit()
+        #prompt = self.llm.get_prompt(goals, premises[:State.max_lemmas], defs)
+        return premises, premises[:State.max_lemmas], defs, lemmas, goals
+    
+    def query_llm(self, goals):
+        #print(1)
+        premises, defs, lemmas = self.get_premises()
+        self.lemmas = lemmas
+        #print(premises, defs, lemmas)
+        #exit()
         prompt = self.llm.get_prompt(goals, premises[:State.max_lemmas], defs)
         return self.llm.query(prompt.strip())
 
@@ -196,7 +207,13 @@ class State:
 
         return res, None
 
-
+    def prove_data_extract(self, tactics_ori=''):
+        if tactics_ori == '':
+            tactics_ori = self.query_llm_data(self.fg_goals)
+        else:
+            print(tactics_ori)
+        return tactics_ori
+    
     def prove(self, tactics_ori=''):
         if tactics_ori == '':
             tactics_ori = self.query_llm(self.fg_goals)

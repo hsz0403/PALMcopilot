@@ -1,0 +1,1 @@
+[{"history": {"proof": "unfold quotient_projection in |- *. simpl in |- *. sfirstorder depth: 3.", "repairs": ["", "", "hammer"], "exceptions": []}, "chat": [], "original": "unfold quotient_projection in |- *. simpl in |- *. auto with algebra.", "hammer_times": 1, "succ": true}]

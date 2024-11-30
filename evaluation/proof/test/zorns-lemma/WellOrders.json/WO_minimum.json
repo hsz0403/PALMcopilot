@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "intros S H'; elim H'. intros x H'0; exists x; split; [ idtac | tauto ]. unfold Inhabited; exists x; auto with sets.", "hammer_times": 1, "succ": false}]

@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "cofix CIH; intros. inversion H; subst. - destruct (pt_ext_map_input_onet_fun p) as [t' Ht']. destruct (pt_ext_map_output_onet_fun p) as [t' Ht']. right.", "hammer_times": 1, "succ": false}]

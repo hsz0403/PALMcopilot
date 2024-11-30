@@ -1,0 +1,1 @@
+[{"history": {"proof": "unfold Nodes in |- *. sauto lq: on depth: 3.", "repairs": ["", "hammer"], "exceptions": []}, "chat": [], "original": "unfold Nodes in |- *. auto with datatypes.", "hammer_times": 1, "succ": true}]

@@ -10,7 +10,7 @@ dependencies:
     - rank-bm25==0.2.2
     - replicate==0.26.0
     - openai==1.30.3
-    - sexpdata==1.0.1
+    - sexpdata==1.0.2
     - pexpect==4.9.0
     - tiktoken==0.5.2  
     - chardet==5.2.0

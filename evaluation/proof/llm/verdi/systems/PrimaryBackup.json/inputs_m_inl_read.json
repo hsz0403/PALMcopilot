@@ -1,0 +1,1 @@
+[{"history": {"proof": "unfold inputs_m in *. simpl in *. intros. repeat break_match; auto.", "repairs": ["", "", "", ""], "exceptions": []}, "chat": [], "original": "unfold inputs_m in *. simpl in *. intros. repeat break_match; auto.", "hammer_times": 0, "succ": true}]

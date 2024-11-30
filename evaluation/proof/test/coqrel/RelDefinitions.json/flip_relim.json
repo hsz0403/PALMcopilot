@@ -1,0 +1,1 @@
+[{"history": {"proof": "qsimpl time: 1.", "repairs": ["not_inductive_product"], "exceptions": [{"ctx": [], "tactic": "induction 1; auto 10 with relations.", "exn": "Not an inductive product.", "type": "not_inductive_product", "handled": true}]}, "chat": [], "original": "induction 1; auto 10 with relations.", "hammer_times": 0, "succ": true}]

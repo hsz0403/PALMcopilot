@@ -1,0 +1,1 @@
+[{"history": {"proof": "sauto lq: on depth: 3.", "repairs": ["hammer"], "exceptions": [{"ctx": [], "tactic": "unfold lb_step_execution.", "exn": "Cannot coerce lb_step_execution to an evaluable reference.", "type": "not_evaluable", "handled": true}]}, "chat": [], "original": "unfold lb_step_execution. intros. simpl in *. tauto.", "hammer_times": 1, "succ": true}]

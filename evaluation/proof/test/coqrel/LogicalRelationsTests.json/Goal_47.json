@@ -1,0 +1,1 @@
+[{"history": {"proof": "sfirstorder depth: 3.", "repairs": ["hammer"], "exceptions": []}, "chat": [], "original": "intros A B R op H x y Hxy; etransitivity; [|symmetry]; eapply H.", "hammer_times": 2, "succ": true}]

@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "induction 1. simpl. omega. simpl trace_outputs. simpl trace_inputs. apply Pos.le_max_l. destruct y. simpl. omega. apply step_async_progress with (1 := H). apply IHclos_refl_trans1. apply IHclos_refl_trans2.", "hammer_times": 2, "succ": false}]

@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "induction l; simpl; intros. - auto. - break_if; simpl. * destruct a. unfold map_packet_name_msg. break_if; try congruence. f_equal. f_equal. eapply IHl; eauto. * f_equal. auto.", "hammer_times": 2, "succ": false}]

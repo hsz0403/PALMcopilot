@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "intros X f g. red; intros Hf. apply (Hf (fun x => ~ g x x)). destruct (g (fun x => ~ g x x) (fun x => ~ g x x)) as [x Hx]. apply Hx; auto.", "hammer_times": 2, "succ": false}]

@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "intros. find_apply_lem_hyp simulation_1_star. find_rewrite. auto.", "hammer_times": 2, "succ": false}]

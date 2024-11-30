@@ -1,0 +1,1 @@
+[{"history": {"proof": "unfold trace_inputs. simpl. hauto lq: on depth: 3.", "repairs": ["", "", "hammer"], "exceptions": []}, "chat": [], "original": "unfold trace_inputs. simpl. intros; omega.", "hammer_times": 1, "succ": true}]

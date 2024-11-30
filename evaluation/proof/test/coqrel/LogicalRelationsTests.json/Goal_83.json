@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": [], "tactic": ["intros A R f C x y Hf HR; apply Hf; eauto.", ""], "exn": "Applied theorem does not have enough premises.", "type": "no_enough_premises", "handled": false}]}, "chat": [], "original": "intros A R f C x y Hf HR; apply Hf; eauto.", "hammer_times": 1, "succ": false}]

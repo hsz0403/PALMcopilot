@@ -1,0 +1,1 @@
+[{"history": {"proof": "intros H x y z ? ?. sauto lq: on depth: 3.", "repairs": ["", "hammer"], "exceptions": []}, "chat": [], "original": "intros H x y z ? ?. inversion H1; inversion H2; subst. constructor; etransitivity; eauto. constructor.", "hammer_times": 1, "succ": true}]

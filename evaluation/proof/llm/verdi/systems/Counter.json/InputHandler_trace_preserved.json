@@ -1,0 +1,1 @@
+[{"history": {"proof": "unfold InputHandler. intros. sauto q: on depth: 3.", "repairs": ["", "", "hammer"], "exceptions": []}, "chat": [], "original": "unfold InputHandler. intros. monad_unfold. destruct i; destruct o; repeat break_match; find_inversion; repeat find_rewrite; repeat erewrite send_packets_nil; simpl; auto.", "hammer_times": 1, "succ": true}]

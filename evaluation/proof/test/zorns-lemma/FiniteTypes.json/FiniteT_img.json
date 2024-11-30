@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": ["intros."], "tactic": "apply image_preserves_finiteness; auto.", "exn": "The reference image_preserves_finiteness was not found in the current environment.", "type": "ref_not_found", "handled": true}]}, "chat": [], "original": "intros. apply image_preserves_finiteness; auto.", "hammer_times": 3, "succ": false}]

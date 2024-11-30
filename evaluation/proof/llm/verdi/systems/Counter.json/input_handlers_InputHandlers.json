@@ -1,0 +1,1 @@
+[{"history": {"proof": "unfold input_handlers, InputHandler. intros. sauto q: on depth: 3.", "repairs": ["", "", "hammer"], "exceptions": []}, "chat": [], "original": "unfold input_handlers, InputHandler. intros. injection H as H H0. rewrite H0. constructor. congruence.", "hammer_times": 1, "succ": true}]

@@ -1,0 +1,23 @@
+verdi/core/Net.json inductive_invariant_true_in_reachable
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/main.py", line 104, in prove_file
+    succ = prove(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/main.py", line 49, in prove
+    succ = state.backtrack()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 296, in backtrack
+    self.focus(len(self.history))
+  File "/home/suozhi/PALM/src/framework.py", line 335, in focus
+    state_ids, _ = self.serapi.add_and_execute(nd.tactic)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/serapi.py", line 403, in add_and_execute
+    responses = self.execute(state_ids[-1])
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/serapi.py", line 409, in execute
+    responses, _ = self.send(cmd, timeout=timeout)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/serapi.py", line 159, in send
+    raise CoqExn(msg)
+src.serapi.CoqExn: sfirstorder failed
+

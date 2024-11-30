@@ -1,0 +1,1 @@
+[{"history": {"proof": "sfirstorder depth: 3.", "repairs": ["hammer"], "exceptions": []}, "chat": [], "original": "cofix cf. intros H. inversion H; subst; clear H. - apply RElim0. - apply RElim_succ; auto. - repeat econstructor; eauto.", "hammer_times": 1, "succ": true}]

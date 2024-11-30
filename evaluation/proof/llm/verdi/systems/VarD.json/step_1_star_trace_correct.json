@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": [], "tactic": "unfold init; apply star_1_correct.", "exn": "The reference star_1_correct was not found in the current environment.", "type": "ref_not_found", "handled": true}]}, "chat": [], "original": "unfold init; apply star_1_correct.", "hammer_times": 1, "succ": false}]

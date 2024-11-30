@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "intros. find_apply_lem_hyp weak_fair_now; auto. break_or_hyp; auto. eauto using now_occurred_elim_r.", "hammer_times": 2, "succ": false}]

@@ -1,0 +1,1 @@
+[{"history": {"proof": "unfold eq_fn in |- *. intros. unfold eval in |- *. rewrite (H b). reflexivity.", "repairs": ["", "", "", "", ""], "exceptions": []}, "chat": [], "original": "unfold eq_fn in |- *. intros. unfold eval in |- *. rewrite (H b). reflexivity.", "hammer_times": 0, "succ": true}]

@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": ["intros."], "tactic": "apply eventually_now_msg_lock; auto.", "exn": "The reference eventually_now_msg_lock was not found in the current environment.", "type": "ref_not_found", "handled": true}]}, "chat": [], "original": "intros. apply eventually_now_msg_lock; auto.", "hammer_times": 3, "succ": false}]

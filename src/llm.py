@@ -1,8 +1,12 @@
+import pdb
+import numpy
 from openai import OpenAI
 import replicate
 from .config import OPENAI_API_KEY, REPLICATE_API_TOKEN, MODEL
 from .utils import *
 import re
+import vllm
+from transformers import AutoTokenizer, AutoModelForCausalLM
 
 
 client = OpenAI(api_key=OPENAI_API_KEY)
@@ -60,6 +64,60 @@ def check_response(response: str):
         return False
     return True
 
+def load_model(name):
+
+    #pdb.set_trace()
+    model = vllm.LLM(
+            model=name,
+            tensor_parallel_size=1,
+            dtype='bfloat16',
+            #max_num_batched_tokens=32768,
+            trust_remote_code=True,
+            enforce_eager=True
+        )
+    tokenizer = AutoTokenizer.from_pretrained(name,trust_remote_code=True)
+    return model, tokenizer
+
+def query_ours(prompt,model_name):
+    #print(prompt)
+    #exit()
+    temperature=0.75
+    max_tokens= 1500
+    stop=['<|im_end|>',]
+    
+    model, tokenizer = load_model(model_name)
+    params = vllm.SamplingParams(
+        n=5,
+        temperature=temperature,
+        #use_beam_search=temperature==0.0,
+        max_tokens=max_tokens,
+        stop=stop,
+        repetition_penalty=1.0
+    )
+    outputs = model.generate([prompt], params, use_tqdm=False)
+    #print(prompt,outputs)
+    #print('outputs',outputs)
+    if len(outputs) == 0:
+        return [], []
+    for output in outputs[0].outputs:
+        text = output.text.replace(tokenizer.eos_token, '')
+    
+    #print(text)
+    #exit()
+    return process_response(text)
+
+
+def chat_template_to_prompt(prompt_list):
+    result = ""
+    total_step = len(prompt_list)
+    for i, message in enumerate(prompt_list):
+        result += ('<|im_start|>' + message['role'] +
+                   '\n' + message['content'])
+        if i+1 != total_step:
+            result += '<|im_end|>\n'
+        elif message['role'] == 'user':
+            result += '<|im_end|>\n<|im_start|>assistant\n'
+    return result
 
 class LLM:
     def __init__(self, max_tokens=7168):
@@ -73,37 +131,54 @@ class LLM:
             ]
         self.length = [trim_prompt(p['content'])[0] for p in self.messages]
 
-    
+    #只用了 goals, premises[:State.max_lemmas], defs
     def get_prompt(self, goals, premises, defs):
-        prompt = instruction + examples
-        assert goals != [], 'goals is [] before querying'
-        
-        goal = goals[0]
-        prompt += '\n\nSolve This Proof State:\n\n'
-        prompt += 'Hypotheses:\n{hypos}\n\nGoal:\n{goal}\n\n'\
-                    .format(hypos='\n'.join([f'{k}: {v}' for k, v in goal['hypos'].items()]) if goal['hypos'] else 'None', goal=goal['goal'])
-        if defs != [] or premises != []:
-            prompt += 'Premises:'
-        if defs != []:
-            num_tokens = self.max_tokens - sum(self.length) - trim_prompt(prompt)[0]
-            tokens_one = int(num_tokens/(len(defs)+len(premises)))
-            prompt += '\n{defs}' \
-                .format(defs= '\n'.join([trim_prompt(d, tokens_one)[1] for d in defs]))
-        if premises != []:
-            num_tokens = self.max_tokens - sum(self.length) - trim_prompt(prompt)[0]
-            tokens_one = int(num_tokens/len(premises))
-            prompt += '\n{lemmas}' \
-                .format(lemmas= '\n'.join([trim_theorem(p, tokens_one)[1] for p in premises]))
-        return prompt
-    
+        if 'suozhi' not in MODEL:
+            prompt = instruction + examples
+            assert goals != [], 'goals is [] before querying'
+            
+            goal = goals[0]
+            prompt += '\n\nSolve This Proof State:\n\n'
+            prompt += 'Hypotheses:\n{hypos}\n\nGoal:\n{goal}\n\n'\
+                        .format(hypos='\n'.join([f'{k}: {v}' for k, v in goal['hypos'].items()]) if goal['hypos'] else 'None', goal=goal['goal'])
+            if defs != [] or premises != []:
+                prompt += 'Premises:'
+            if defs != []:
+                num_tokens = self.max_tokens - sum(self.length) - trim_prompt(prompt)[0]
+                tokens_one = int(num_tokens/(len(defs)+len(premises)))
+                prompt += '\n{defs}' \
+                    .format(defs= '\n'.join([trim_prompt(d, tokens_one)[1] for d in defs]))
+            if premises != []:
+                num_tokens = self.max_tokens - sum(self.length) - trim_prompt(prompt)[0]
+                tokens_one = int(num_tokens/len(premises))
+                prompt += '\n{lemmas}' \
+                    .format(lemmas= '\n'.join([trim_theorem(p, tokens_one)[1] for p in premises]))
+            return prompt
+        else:
+            #content="Solve This Proof State:\n\nHypotheses:\nK: Ordered.type\nV: Equality.type\nU: UMC.type K (Equality.sort V)\nk: Ordered.sort K\nv: Equality.sort V\nf: PCM.sort (@union_map_classPCM K (Equality.sort V) (union_mapUMC K (Equality.sort V)))\n\nGoal:\n@eq bool (@eq_op (union_map_eqType K V) (@PCM.join (@union_map_classPCM K (Equality.sort V) (union_mapUMC K (Equality.sort V))) (@um_pts K (Equality.sort V) k v) f) (@PCM.unit (union_mapPCM K (Equality.sort V)))) false\n\n"
+            assert goals != [], 'goals is [] before querying'
+            
+            goal = goals[0]
+            #print(defs)
+            content="Solve This Proof State:\n\nHypotheses:\n\nGoal:\n{goal}\n\n".format(hypos='\n'.join([f'{k}: {v}' for k, v in goal['hypos'].items()]) if goal['hypos'] else '', goal=goal['goal'])
+            #print(content)
+            #exit()
+            prompt=chat_template_to_prompt([{'role': 'user', 'content': content}])
+            return prompt
 
     def query(self, prompt: str):
+        #print('querying')
+        #exit()
         if MODEL.startswith('gpt'):
             return self.query_gpt(prompt)
         elif 'llama' in MODEL:
             return self.query_llama(prompt)
+        elif 'suozhi' in MODEL:
+            return query_ours(prompt,MODEL)
         
 
+
+        
     def query_llama(self, prompt: str):
         length, prompt = trim_prompt(prompt, self.max_tokens-sum(self.length))
         self.messages.append({'role': 'user', 'content': prompt})

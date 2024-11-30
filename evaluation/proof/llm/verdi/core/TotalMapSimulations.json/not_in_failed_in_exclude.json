@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "induction ns; simpl in *; intros. - tauto. - break_if; simpl in *. + eauto. + destruct (name_eq_dec (tot_map_name_inv n) a). * subst. find_apply_lem_hyp remove_all_cons_neq. intuition. * find_apply_lem_hyp remove_all_cons_eq. intuition.", "hammer_times": 2, "succ": false}]

@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": [], "tactic": "unfold init_handlers in *; case eq0_spec; auto.", "exn": "The reference eq0_spec was not found in the current environment.", "type": "ref_not_found", "handled": true}]}, "chat": [], "original": "unfold init_handlers in *; case eq0_spec; auto. intros; contradiction.", "hammer_times": 2, "succ": false}]

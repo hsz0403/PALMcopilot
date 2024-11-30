@@ -1,0 +1,1 @@
+[{"history": {"proof": "induction out as [ | o ]; intros; simpl. - auto. - rewrite IHout. sfirstorder depth: 3.", "repairs": ["", "", "", "", "", "hammer"], "exceptions": []}, "chat": [], "original": "induction out as [ | o ]; intros; simpl. - auto. - rewrite IHout. simpl. unfold map2fst; fold map2fst. unfold inr; fold inr. destruct o; auto.", "hammer_times": 1, "succ": true}]

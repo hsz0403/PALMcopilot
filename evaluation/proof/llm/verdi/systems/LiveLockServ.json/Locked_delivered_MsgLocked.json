@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "red. exists Server, nil, (Locked:: nil). repeat split; auto; try solve [apply msg_queue_not_empty; apply in_eq].", "hammer_times": 2, "succ": false}]

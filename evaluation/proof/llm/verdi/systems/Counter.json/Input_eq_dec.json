@@ -1,0 +1,1 @@
+[{"history": {"proof": "decide equality.", "repairs": [""], "exceptions": [{"ctx": ["decide equality."], "tactic": "apply eq_nat_dec.", "exn": "No such goal.", "type": "no_goal", "handled": true}]}, "chat": [], "original": "decide equality. apply eq_nat_dec. Defined.", "hammer_times": 0, "succ": true}]
