@@ -167,6 +167,7 @@ class State:
         #print(premises, defs, lemmas)
         #exit()
         prompt = self.llm.get_prompt(goals, premises[:State.max_lemmas], defs)
+        print('llm prompt: ', prompt    )
         return self.llm.query(prompt.strip())
 
 

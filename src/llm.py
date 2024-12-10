@@ -154,7 +154,7 @@ class LLM:
                 prompt += '\n{lemmas}' \
                     .format(lemmas= '\n'.join([trim_theorem(p, tokens_one)[1] for p in premises]))
             return prompt
-        else:
+        elif "iter_1800_hf" in MODEL:
             #content="Solve This Proof State:\n\nHypotheses:\nK: Ordered.type\nV: Equality.type\nU: UMC.type K (Equality.sort V)\nk: Ordered.sort K\nv: Equality.sort V\nf: PCM.sort (@union_map_classPCM K (Equality.sort V) (union_mapUMC K (Equality.sort V)))\n\nGoal:\n@eq bool (@eq_op (union_map_eqType K V) (@PCM.join (@union_map_classPCM K (Equality.sort V) (union_mapUMC K (Equality.sort V))) (@um_pts K (Equality.sort V) k v) f) (@PCM.unit (union_mapPCM K (Equality.sort V)))) false\n\n"
             assert goals != [], 'goals is [] before querying'
             
@@ -164,6 +164,15 @@ class LLM:
             #print(content)
             #exit()
             prompt=chat_template_to_prompt([{'role': 'user', 'content': content}])
+            return prompt
+        elif "5f0b02c75b57c5855da9ae460ce51323ea669d8a" in MODEL:# llama 8B instruct without retrivel
+            prompt = instruction + examples
+            assert goals != [], 'goals is [] before querying'
+            
+            goal = goals[0]
+            prompt += '\n\nSolve This Proof State:\n\n'
+            prompt += 'Hypotheses:\n{hypos}\n\nGoal:\n{goal}\n\n'\
+                        .format(hypos='\n'.join([f'{k}: {v}' for k, v in goal['hypos'].items()]) if goal['hypos'] else 'None', goal=goal['goal'])
             return prompt
 
     def query(self, prompt: str):

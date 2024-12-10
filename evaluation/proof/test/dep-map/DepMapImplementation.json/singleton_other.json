@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": ["intros."], "tactic": "rewrite singleton_spec, gempty; auto.", "exn": "The reference singleton_spec was not found in the current environment.", "type": "ref_not_found", "handled": true}]}, "chat": [], "original": "intros. rewrite singleton_spec, gempty; auto.", "hammer_times": 2, "succ": false}]

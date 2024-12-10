@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": ["intros."], "tactic": "apply add_spec_ok.", "exn": "The reference add_spec_ok was not found in the current environment.", "type": "ref_not_found", "handled": true}]}, "chat": [], "original": "intros. apply add_spec_ok. intuition.", "hammer_times": 3, "succ": false}]

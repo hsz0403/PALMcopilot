@@ -7973,3 +7973,1049 @@ Traceback (most recent call last):
                  ~~~~~~~~^~~~~~~~~~~~~~~~~~
 ZeroDivisionError: division by zero
 
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    tactics_ori = self.query_llm_data(self.fg_goals)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+dep-map/DepMapFactsImplementation.json eq_incl_compat
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/main.py", line 106, in prove_file
+    succ = prove(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/main.py", line 49, in prove
+    succ = state.backtrack()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 314, in backtrack
+    self.focus(len(self.history))
+  File "/home/suozhi/PALM/src/framework.py", line 353, in focus
+    state_ids, _ = self.serapi.add_and_execute(nd.tactic)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/serapi.py", line 403, in add_and_execute
+    responses = self.execute(state_ids[-1])
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/serapi.py", line 409, in execute
+    responses, _ = self.send(cmd, timeout=timeout)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/serapi.py", line 159, in send
+    raise CoqExn(msg)
+src.serapi.CoqExn: sfirstorder failed
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+verdi/systems/SerializedMsgParamsCorrect.json orig_multi_new_msg_params_tot_map_congruency
+Traceback (most recent call last):
+  File "/home/suozhi/PALM/src/sft_data.py", line 108, in prove_file_data
+    data = prove_data(state, file, proof, resume, backtrack=backtrack)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/sft_data.py", line 47, in prove_data
+    succ = state.prove_data_extract(tactics_ori=tactics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 212, in prove_data_extract
+    if tactics_ori == '':
+                      ^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 156, in query_llm_data
+    premises, defs, lemmas = self.get_premises()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/framework.py", line 152, in get_premises
+    return self.retrieval.retrieve_predict(self.serapi, goals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 182, in retrieve_predict
+    query_bm25 = bm25(list(context))
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/PALM/src/retrieval.py", line 14, in bm25
+    bm25 = BM25Okapi(corpus)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 83, in __init__
+    super().__init__(corpus, tokenizer)
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 27, in __init__
+    nd = self._initialize(corpus)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/suozhi/anaconda3/envs/palm/lib/python3.11/site-packages/rank_bm25.py", line 52, in _initialize
+    self.avgdl = num_doc / self.corpus_size
+                 ~~~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+

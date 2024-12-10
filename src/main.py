@@ -64,7 +64,7 @@ def prove_hammer_only(state: State):
 def prove_file(file: str, exp_name='test', theorem='', resume='', backtrack=False, skip=False, intersect=False):
     print(file)
     print(data_path)
-    exit()
+    #exit()
     proj = Path(file).parts[0]
     intersection = json.load(open((os.path.join(data_path, 'intersection.json'))))[proj]
     code, path_option, version, theorems = prepare(file)

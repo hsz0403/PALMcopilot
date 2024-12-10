@@ -6,6 +6,10 @@ REPLICATE_API_TOKEN = ''
 # Options: meta/meta-llama-3-8b-instruct ; meta/meta-llama-70b-instruct
 MODEL = 'gpt-3.5-turbo-0125'
 MODEL = '/home/suozhi/models/deepseek_prover_whole_1800iter/iter_1800_hf'
+
+#llama 3 8B instruct
+
+MODEL = '/home/suozhi/models/5f0b02c75b57c5855da9ae460ce51323ea669d8a'
 # Path to opam installation, usually /home/username/.opam
 # Replace username with your user name.
 opam_path = '/home/suozhi/.opam' 
