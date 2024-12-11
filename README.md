@@ -6,6 +6,7 @@ How to run PALM code base?
 
 see [PALMreadme](PALMreadme.md)
 
+install additional instructions see [install](install_experience.md)
 
 Additional files added: [process whole proof data with retrieval](src/process_whole_proof_data_retrieval.py)
 
