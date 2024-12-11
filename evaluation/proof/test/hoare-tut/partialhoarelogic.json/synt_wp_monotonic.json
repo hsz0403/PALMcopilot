@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": ["unfold synt_wp; intros."], "tactic": "apply (wp_mono p) in H; auto.", "exn": "The reference wp_mono was not found in the current environment.", "type": "ref_not_found", "handled": true}]}, "chat": [], "original": "unfold synt_wp; intros. apply (wp_mono p) in H; auto.", "hammer_times": 2, "succ": false}]

@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "intros. apply Zis_gcd_sym. apply Zis_gcd_minus. apply Zis_gcd_sym. auto.", "hammer_times": 5, "succ": false}]

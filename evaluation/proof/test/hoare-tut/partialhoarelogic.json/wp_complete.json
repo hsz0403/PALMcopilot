@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": [], "tactic": "unfold synt_wp; Krm0.", "exn": "The reference Krm0 was not found in the current environment.", "type": "ref_not_found", "handled": true}]}, "chat": [], "original": "unfold synt_wp; Krm0.", "hammer_times": 1, "succ": false}]

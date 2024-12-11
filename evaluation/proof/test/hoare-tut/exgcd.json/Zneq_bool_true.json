@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "unfold Zneq_bool in |- *. intros; discriminate.", "hammer_times": 2, "succ": false}]
