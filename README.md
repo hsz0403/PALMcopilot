@@ -32,7 +32,7 @@ install additional instructions (you might face errors) see [install](install_ex
 
 ## Github Data Crawler
 
-Now start yet.
+Not start yet.
 
 TODO: Github Coq project: Before 2024 for Training, After 2024 for Testing
 
