@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "Inductive btree : Type := | leaf : A -> btree | node : btree -> btree -> btree.", "hammer_times": 1, "succ": false}]

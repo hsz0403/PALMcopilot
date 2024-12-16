@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": ["unfold getLocal."], "tactic": "unfold init_heap_cxt.", "exn": "The reference init_heap_cxt was not found in the current environment.", "type": "ref_not_found", "handled": true}]}, "chat": [], "original": "unfold getLocal. unfold init_heap_cxt. simpl. destruct cn; eauto.", "hammer_times": 5, "succ": false}]

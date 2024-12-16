@@ -137,7 +137,15 @@ if __name__ == '__main__':
 # back_all_skip_fail ours back_no_bullet back_no_intros origin best_hammer , 'ours_new_llama', 'ours_new', 'best_hammer'
     # res_succ, res_all = see_all_ours(['test', 'hammer'], projs, False)
     # print(len(res_succ), len(res_all))
-    sucess_difference( ['test'], ['ours_llama_8b'],['coqrel'], False)
+    proj_name='zorns-lemma'
+    print("ours w/o retrieval vs llama8b w/ retrieval:")
+    sucess_difference( ['test'], ['ours_llama_8b'],[proj_name], False)
+    sucess_difference( ['ours_llama_8b'],['test'], [proj_name], False)
+    
+    print("ours w/o retrieval vs llama8b w/o retrieval:")
+    sucess_difference( ['test'], ['llama8B_no_retrieval'],[proj_name], False)
+    sucess_difference( ['llama8B_no_retrieval'],['test'], [proj_name], False)
+    
     #print(success_total(['ours'],['coqrel']))
     # res_succ, res_all = see_all_ours(['ours_new'], projs, False)
     # res_succ_hammer, _ = see_all_ours(['best_hammer'], projs, False)

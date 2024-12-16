@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": [], "tactic": "intros a b p q Hlt H.", "exn": "No product even after head-reduction.", "type": "no_product", "handled": true}]}, "chat": [], "original": "intros a b p q Hlt H. rewrite H. apply pluspf_inv with (c := pX (A:=A) (n:=n) b q). apply H. apply Hlt.", "hammer_times": 2, "succ": false}]

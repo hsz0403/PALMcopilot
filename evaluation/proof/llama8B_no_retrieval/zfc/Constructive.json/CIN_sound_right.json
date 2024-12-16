@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": [], "tactic": "Definition EQC (E E' : Ens) := forall x : X, V x E <-> V x E'.", "exn": "The reference X was not found in the current environment.", "type": "ref_not_found", "handled": true}]}, "chat": [], "original": "Definition EQC (E E' : Ens) := forall x : X, V x E <-> V x E'.", "hammer_times": 1, "succ": false}]

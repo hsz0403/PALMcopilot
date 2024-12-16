@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "Inductive Ens : Type := . Inductive Sing {A : Type} (x : A) : Set := . Definition EQ {A : Type} (x y : A) := x = y.", "hammer_times": 1, "succ": false}]

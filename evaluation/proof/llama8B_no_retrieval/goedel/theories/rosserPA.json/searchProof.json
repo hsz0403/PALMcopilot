@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": ["intros H."], "tactic": "destruct H as [H | H].", "exn": "Unable to find an instance for the variable x.", "type": "no_instance_var", "handled": true}]}, "chat": [], "original": "unfold notH. intros H. destruct H as [H | H].", "hammer_times": 2, "succ": false}]

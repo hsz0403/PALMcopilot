@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "Inductive EQC : Ens -> Ens -> Prop := | eqc_refl : forall E, EQC E E. Inductive CINC : Ens -> Ens -> Prop := | cinc_refl : forall E, CINC E E.", "hammer_times": 1, "succ": false}]

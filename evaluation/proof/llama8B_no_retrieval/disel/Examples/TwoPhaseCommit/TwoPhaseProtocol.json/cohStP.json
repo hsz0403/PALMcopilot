@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "unfold dyn_tp in |- *. unfold PStateT in |- *. unfold getLocal in |- *.", "hammer_times": 4, "succ": false}]

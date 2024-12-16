@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "Fixpoint mdiv n d := match d with | 0 => 0 | S d' => n / d + mdiv (n mod d) d' end. Fixpoint mmod n d := match d with | 0 => n | S d' => n mod d end.", "hammer_times": 1, "succ": false}]

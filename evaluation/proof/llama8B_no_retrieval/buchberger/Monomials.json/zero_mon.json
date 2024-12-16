@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "Fixpoint mon (d : nat) {struct d} : nat := match d with | O => O | S n => S (mon n) end.", "hammer_times": 1, "succ": false}]

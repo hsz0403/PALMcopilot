@@ -1,0 +1,1 @@
+[{"history": {"proof": "sfirstorder depth: 3use: mon, nat.", "repairs": ["hammer"], "exceptions": []}, "chat": [], "original": "Definition mon (d : nat) := (nat, (fun x y => d + x + y)%nat, (fun x => d + x)%nat).", "hammer_times": 1, "succ": true}]

@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "Definition Proper {A} (R : A -> A -> Prop) := forall x y, R x y -> forall z, R x z -> R y z.", "hammer_times": 1, "succ": false}]

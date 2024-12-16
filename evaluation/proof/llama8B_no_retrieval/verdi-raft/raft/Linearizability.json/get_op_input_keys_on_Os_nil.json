@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "Inductive op : Type := O : K -> op. Definition get_op_input_keys {l : list op} : list K := fold_left (fun x k => match k with O k' => x ++ [k'] | _ => x end) [] l.", "hammer_times": 1, "succ": false}]

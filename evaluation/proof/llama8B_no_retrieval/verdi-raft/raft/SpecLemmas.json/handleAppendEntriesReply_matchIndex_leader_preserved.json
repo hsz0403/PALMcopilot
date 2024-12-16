@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "intros. destruct (handleAppendEntriesReply h st h' t es res) eqn:Heq.", "hammer_times": 3, "succ": false}]

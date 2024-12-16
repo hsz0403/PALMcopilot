@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": ["intros A B HA HB."], "tactic": "apply proof_irrelevance.", "exn": "In environment A, B : Map bool HA : lem A B HB : lem B A Unable to unify \"Set\" with \"Prop\".", "type": "cannot_unify", "handled": true}]}, "chat": [], "original": "intros A B HA HB. apply proof_irrelevance.", "hammer_times": 2, "succ": false}]

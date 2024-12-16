@@ -2,7 +2,10 @@ import os
 import json
 import hashlib
 import pdb
+import threading
+
 import random
+import time
 from .utils import *
 from .sft_data import prove_file_data
 
@@ -19,6 +22,44 @@ data_path='/home/suozhi/PALM/data'
 files = [f for f in files_in_rec(os.path.join(data_path)) if f.endswith('.json') and f!='intersection.json' and  f!='path.json']
 
 
+def extract_proof_data(file_name, max_tokens, length, trim_prompt, trim_theorem, prove_file_data):
+    json_name=file_name.replace('.v','.json')
+    file_data=prove_file_data(json_name)
+    premises, defs, goals=file_data[1],file_data[2],file_data[4]
+    
+    goal = goals[0]
+    prompt = 'Solve This Proof State:\n\n'
+    prompt += 'Hypotheses:\n{hypos}\n\nGoal:\n{goal}\n\n'\
+                .format(hypos='\n'.join([f'{k}: {v}' for k, v in goal['hypos'].items()]) if goal['hypos'] else 'None', goal=goal['goal'])
+    if defs != [] or premises != []:
+        prompt += 'Premises:'
+    if defs != []:
+        
+        num_tokens = max_tokens - sum(length) - trim_prompt(prompt)[0]
+        tokens_one = int(num_tokens/(len(defs)+len(premises)))
+        prompt += '\n{defs}' \
+            .format(defs= '\n'.join([trim_prompt(d, tokens_one)[1] for d in defs]))
+    if premises != []:
+        num_tokens = max_tokens - sum(length) - trim_prompt(prompt)[0]
+        tokens_one = int(num_tokens/len(premises))
+        prompt += '\n{lemmas}' \
+            .format(lemmas= '\n'.join([trim_theorem(p, tokens_one)[1] for p in premises]))
+    return prompt
+
+def execute_with_timeout(func, args=(), kwargs={}, timeout_duration=60):
+    result = [None]
+
+    def target():
+        result[0] = func(*args, **kwargs)
+
+    thread = threading.Thread(target=target)
+    thread.start()
+    thread.join(timeout_duration)
+    if thread.is_alive():
+        return None
+    else:
+        return result[0]
+
 def process_json_file(file_path):
     with open(file_path, 'r') as f:
         data = json.load(f)
@@ -31,7 +72,7 @@ def process_json_file(file_path):
         #print(len(data['proofs']))
         theorem_name = proof['name']
         file_name = f"{data['coq_project']}/{data['filename']}"
-        
+        print('file_name:',file_name)
         #exit()
         max_tokens=7168
         messages = []
@@ -40,29 +81,15 @@ def process_json_file(file_path):
         if file_name.replace('.v','.json') in files:
             count+=1
             try:
-                json_name=file_name.replace('.v','.json')
-                file_data=prove_file_data(json_name)
-                premises, defs, goals=file_data[1],file_data[2],file_data[4]
+                time_interval = time.time()
                 
-                goal = goals[0]
-                prompt = 'Solve This Proof State:\n\n'
-                prompt += 'Hypotheses:\n{hypos}\n\nGoal:\n{goal}\n\n'\
-                            .format(hypos='\n'.join([f'{k}: {v}' for k, v in goal['hypos'].items()]) if goal['hypos'] else 'None', goal=goal['goal'])
-                if defs != [] or premises != []:
-                    prompt += 'Premises:'
-                if defs != []:
-                    
-                    num_tokens = max_tokens - sum(length) - trim_prompt(prompt)[0]
-                    tokens_one = int(num_tokens/(len(defs)+len(premises)))
-                    prompt += '\n{defs}' \
-                        .format(defs= '\n'.join([trim_prompt(d, tokens_one)[1] for d in defs]))
-                if premises != []:
-                    num_tokens = max_tokens - sum(length) - trim_prompt(prompt)[0]
-                    tokens_one = int(num_tokens/len(premises))
-                    prompt += '\n{lemmas}' \
-                        .format(lemmas= '\n'.join([trim_theorem(p, tokens_one)[1] for p in premises]))
+                prompt = execute_with_timeout(extract_proof_data, args=(file_name, max_tokens, length, trim_prompt, trim_theorem, prove_file_data), timeout_duration=120)
                 
-                print(prompt)
+                print("prompt:",prompt)
+                #exit()
+                time_interval = time.time() - time_interval
+                #print("time_interval:",time_interval)
+                #print(prompt)
             except Exception as e:
                 print(f"Error processing file {file_name}: {e}")
                 initial_goal_id = proof['steps'][0]['goal_ids']['fg'][0]
@@ -107,12 +134,13 @@ def process_json_file(file_path):
 
            
         print('total_proofs',total_proofs)
-        sft_data.append({
-            "messages": [
-                {"role": "user", "content": prompt},
-                {"role": "assistant", "content": full_proof}
-            ]
-        })
+        if prompt is not None:
+            sft_data.append({
+                "messages": [
+                    {"role": "user", "content": prompt},
+                    {"role": "assistant", "content": full_proof}
+                ]
+            })
     #print('count ',count)
     #exit()
     return sft_data, total_tactic_lines, total_proofs, count

@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": ["unfold nat_to_ring."], "tactic": "rewrite <- plus_one_ring.", "exn": "The reference plus_one_ring was not found in the current environment.", "type": "ref_not_found", "handled": true}]}, "chat": [], "original": "unfold nat_to_ring. rewrite <- plus_one_ring. auto.", "hammer_times": 3, "succ": false}]

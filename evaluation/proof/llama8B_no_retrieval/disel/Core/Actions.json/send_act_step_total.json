@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "unfold send_act_safe in S. destruct S as [s'' s_safe]. destruct s'' as [s'' _]. unfold send_act_step. destruct st as [|nid' s'' msg' l' st']. - exists (s'', msg), to. split; eauto. - destruct s'' as [s'' _].", "hammer_times": 3, "succ": false}]

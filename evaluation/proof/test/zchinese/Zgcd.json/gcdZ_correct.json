@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": [{"ctx": ["unfold gcdZ in |- *.", "intros."], "tactic": "apply gcd_correct.", "exn": "The reference gcd_correct was not found in the current environment.", "type": "ref_not_found", "handled": true}]}, "chat": [], "original": "unfold gcdZ in |- *. intros. apply gcd_correct.", "hammer_times": 4, "succ": false}]

@@ -1,0 +1,1 @@
+[{"history": {"proof": "", "repairs": [], "exceptions": []}, "chat": [], "original": "Hint Extern 1 (_ = _) => reflexivity. Hint Extern 1 (_ <> _) => discriminate.", "hammer_times": 1, "succ": false}]

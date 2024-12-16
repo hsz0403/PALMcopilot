@@ -1,0 +1,1 @@
+[{"history": {"proof": "intros n H. induction H. - sauto lq: on depth: 3. - sfirstorder depth: 3.", "repairs": ["", "", "", "hammer", "", "hammer"], "exceptions": []}, "chat": [], "original": "intros n H. induction H. - destruct (language_dec L) as [H1 | H2]. ++ apply nilTermsHelp in H1. congruence. ++ simpl in H2. apply IHH. auto.", "hammer_times": 2, "succ": true}]
