@@ -164,10 +164,12 @@ class State:
         #print(1)
         premises, defs, lemmas = self.get_premises()
         self.lemmas = lemmas
+        #print(2)
         #print(premises, defs, lemmas)
         #exit()
         prompt = self.llm.get_prompt(goals, premises[:State.max_lemmas], defs)
         print('llm prompt: ', prompt    )
+        #exit()
         return self.llm.query(prompt.strip())
 
 
@@ -221,7 +223,7 @@ class State:
         
         self.original = tactics_ori
         tactics, exn = tactic_unifier(self.serapi, tactics_ori)
-        print(tactics)
+        print('tactics: ',tactics)
         if exn != '':
             print(exn, tactics_ori)
         tactics = deque([(t, '') for t in tactics])

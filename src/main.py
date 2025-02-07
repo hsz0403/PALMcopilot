@@ -43,7 +43,6 @@ def prove(state: State, file_name: str, proof_data, resume='', backtrack=False):
                     # raise Exception('resume failed: original proof is empty')
     
     print('original resume: ', tactics) 
-    
     succ = state.prove(tactics_ori=tactics)
     if not succ and backtrack:
         succ = state.backtrack()

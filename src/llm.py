@@ -79,13 +79,14 @@ def load_model(name):
     return model, tokenizer
 
 def query_ours(prompt,model_name):
-    #print(prompt)
+    #print('prompt',prompt)
     #exit()
     temperature=0.75
     max_tokens= 1500
     stop=['<|im_end|>',]
     
     model, tokenizer = load_model(model_name)
+    print(model_name)
     params = vllm.SamplingParams(
         n=5,
         temperature=temperature,
@@ -102,7 +103,7 @@ def query_ours(prompt,model_name):
     for output in outputs[0].outputs:
         text = output.text.replace(tokenizer.eos_token, '')
     
-    #print(text)
+    print('text: ',text)
     #exit()
     return process_response(text)
 
@@ -174,6 +175,42 @@ class LLM:
             prompt += 'Hypotheses:\n{hypos}\n\nGoal:\n{goal}\n\n'\
                         .format(hypos='\n'.join([f'{k}: {v}' for k, v in goal['hypos'].items()]) if goal['hypos'] else 'None', goal=goal['goal'])
             return prompt
+
+        elif 'LLaMA-Factory' in MODEL or 'raid' in MODEL:
+            if 'prover_no_retrieval_lora' in MODEL or 'whole_proof_no_retr' in MODEL:
+                assert goals != [], 'goals is [] before querying'
+                #print(MODEL) 
+                goal = goals[0]
+                #print(defs)
+                content="Solve This Proof State:\n\nHypotheses:\n\nGoal:\n{goal}\n\n".format(hypos='\n'.join([f'{k}: {v}' for k, v in goal['hypos'].items()]) if goal['hypos'] else '', goal=goal['goal'])
+                #print(content)
+                #exit()
+                prompt=chat_template_to_prompt([{'role': 'user', 'content': content}])
+                return prompt
+            elif 'prover_retrieval_lora' in MODEL:
+                
+                assert goals != [], 'goals is [] before querying'
+                
+                goal = goals[0]
+                prompt = '\n\nSolve This Proof State:\n\n'
+                prompt += 'Hypotheses:\n{hypos}\n\nGoal:\n{goal}\n\n'\
+                            .format(hypos='\n'.join([f'{k}: {v}' for k, v in goal['hypos'].items()]) if goal['hypos'] else 'None', goal=goal['goal'])
+                if defs != [] or premises != []:
+                    prompt += 'Premises:'
+                if defs != []:
+                    num_tokens = self.max_tokens - sum(self.length) - trim_prompt(prompt)[0]
+                    tokens_one = int(num_tokens/(len(defs)+len(premises)))
+                    prompt += '\n{defs}' \
+                        .format(defs= '\n'.join([trim_prompt(d, tokens_one)[1] for d in defs]))
+                if premises != []:
+                    num_tokens = self.max_tokens - sum(self.length) - trim_prompt(prompt)[0]
+                    tokens_one = int(num_tokens/len(premises))
+                    prompt += '\n{lemmas}' \
+                        .format(lemmas= '\n'.join([trim_theorem(p, tokens_one)[1] for p in premises]))
+                prompt=chat_template_to_prompt([{'role': 'user', 'content': prompt}])
+                print("!!!!\n!!!!!!!!!")
+                return prompt
+        
 
     def query(self, prompt: str):
         #print('querying')

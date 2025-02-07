@@ -10,6 +10,11 @@ MODEL = '/home/suozhi/models/deepseek_prover_whole_1800iter/iter_1800_hf'
 #llama 3 8B instruct
 
 #MODEL = '/home/suozhi/models/5f0b02c75b57c5855da9ae460ce51323ea669d8a'
+
+# by llama factory:
+
+MODEL = '/home/suozhi/raid_suozhi/saves/whole_proof_no_retr/full/sft'
+
 # Path to opam installation, usually /home/username/.opam
 # Replace username with your user name.
 opam_path = '/home/suozhi/.opam' 

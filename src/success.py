@@ -138,13 +138,23 @@ if __name__ == '__main__':
     # res_succ, res_all = see_all_ours(['test', 'hammer'], projs, False)
     # print(len(res_succ), len(res_all))
     proj_name='zorns-lemma'
-    print("ours w/o retrieval vs llama8b w/ retrieval:")
-    sucess_difference( ['test'], ['ours_llama_8b'],[proj_name], False)
-    sucess_difference( ['ours_llama_8b'],['test'], [proj_name], False)
+    #proj_name='zchinese'
+    proj1='lora_no_retrieval'
+    proj2='lora_retrieval'
+    proj3='ours_llama_8b'
+    proj4='test'
+    proj5='lora_no_retrieval_5epoch'
+    proj6='0204_full_no_retr'
+
+    def compare(proj1,proj2):
+        print(f"{proj1} vs {proj2}:")
+        sucess_difference( [proj1],[proj2],[proj_name], False)
+        sucess_difference( [proj2],[proj1], [proj_name], False)
     
-    print("ours w/o retrieval vs llama8b w/o retrieval:")
-    sucess_difference( ['test'], ['llama8B_no_retrieval'],[proj_name], False)
-    sucess_difference( ['llama8B_no_retrieval'],['test'], [proj_name], False)
+
+    compare(proj6,proj3)
+    # sucess_difference( ['test'], ['llama8B_no_retrieval'],[proj_name], False)
+    # sucess_difference( ['llama8B_no_retrieval'],['test'], [proj_name], False)
     
     #print(success_total(['ours'],['coqrel']))
     # res_succ, res_all = see_all_ours(['ours_new'], projs, False)
